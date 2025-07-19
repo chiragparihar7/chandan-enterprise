@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Navbar Base */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+}
+
+/* Logo */
+.nav-logo img {
+  width: 85px;
+  height: auto;
+}
+
+/* Menu links */
+.nav-menu .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-menu .nav-link li {
+  list-style: none;
+}
+
+.nav-menu .nav-link a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.nav-menu .nav-link a:hover {
+  color: #007bff;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .nav-menu .nav-link {
+    gap: 30px;
+  }
+
+  .nav-menu .nav-link a {
+    font-size: 17px;
+  }
+
+  .nav-logo img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-menu .nav-link {
+    /* ✅ These 3 lines are CRITICAL */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-menu .nav-link a {
+    font-size: 16px;
+  }
+
+  .nav-logo img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo img {
+    width: 70px;
+  }
+
+  .nav-menu .nav-link a {
+    font-size: 15px;
+  }
+}
+
+/* ======== Service Section Start  */
+
+.services-section {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 18px;
+  color: #ff3c3c;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-column {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.service-column h3 {
+  color: #0078a0;
+  font-size: 20px;
+  margin-bottom: 17px;
+}
+
+.service-column ul {
+  padding-left: 20px;
+}
+
+.service-column ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.service-column ul li a {
+  color: #000;
+  text-decoration: undnoerline;
+  font-size: 18px;
+}
+
+.warranty-text {
+  margin-top: 40px;
+  color: #ff3c3c;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* ========= Tag Line CSS ============  */
+.tagline-section{
+    background-color: #1b82a4;
+    font-size: 1rem;
+    color: #fff;
+}
+.tagline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 20px;
+  padding: 20px;
+}
+
+.column3 {
+  display: flex;
+  align-items: center;
+  flex: 1 1 30%; /* responsive columns */
+  min-width: 200px;
+  justify-content: center;
+}
+
+.column3 img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.column3 span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.column3 i{
+    margin-right: 10px;
+}
+.clear {
+  display: none; /* not needed anymore with flexbox */
+}
+
+
+/* ========= Content Sections ========== */
+
+.content-section {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 22px;
+  color: #00587a;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.description-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Columns Row */
+.row-columns {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.column {
+  flex: 1 1 45%;
+}
+
+.column h3 {
+  color: #2d6c8d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Motto Section */
+.motto {
+  margin-top: 20px;
+}
+
+.motto h3 {
+  color: #2d6c8d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.motto ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.motto ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row-columns {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* ========= Footer Section =========  */
+
+.footer-section {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #000;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact h4,
+.footer-address h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-contact p,
+.footer-address p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+.footer-address {
+    width: 25%;
+}
+.brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f00;
+  color: #fff;
+  padding: 8px 12px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brochure-btn img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-links ul,
+  .footer-contact,
+  .footer-address {
+    text-align: center;
+  }
+}
