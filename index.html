@@ -9,7 +9,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./CSS/styles.css">
-
+    
 </head>
 
 <body>
@@ -24,9 +24,9 @@
                     <div class="nav-menu" id="navMenu"> <!-- ✅ Only this has the id -->
                         <ul class="nav-link">
                             <li><a href="/">Home</a></li>
-                            <li><a href="pages/about.html">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Client List</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="client.html">Client List</a></li>
                             <li><a href="#">Testimonials</a></li>
                             <li><a href="#">Enquiry Form</a></li>
                             <li><a href="#">Contact Us</a></li>
@@ -191,48 +191,55 @@
         </section>
 
 
-        <footer class="footer-section">
-            <div class="footer-container">
-                <!-- Column 1: Logo -->
-                <div class="footer-logo">
-                    <img src="Images/chandan-logo.png" alt="Universal Waterproofing Logo" />
+       <footer class="footer-attractive">
+            <div class="container footer-flex">
+
+                <!-- Logo & Company -->
+                <div class="footer-col footer-logo-col">
+                    <img src="images/chandan-logo.png" alt="Chandan Enterprise Logo" class="footer-logo" />
+                    <p>
+                        Providing industry-leading waterproofing solutions for homes, businesses, and industries.
+                        Trusted by 1000+ clients.
+                    </p>
                 </div>
 
-                <!-- Column 2: Navigation Links -->
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">LEAK DETECTION SERVICES</a></li>
-                        <li><a href="#">WATERPROOFING SERVICES</a></li>
-                        <li><a href="#">CIVIL SERVICES</a></li>
-                        <li><a href="#">PAINTING SERVICES</a></li>
-                        <li><a href="#">CLIENT LIST</a></li>
-                        <li><a href="#">TESTIMONIALS</a></li>
-                        <li><a href="#">CONTACT US</a></li>
+                <!-- Navigation -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
+                        <li><a href="client.html"><i class="fas fa-angle-right"></i> Clients</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Contact Info + Brochure -->
-                <div class="footer-contact">
-                    <h4>Universal Waterproofing Works</h4>
-                    <p>+91 97734 87538<br>+91 98213 05558<br>info@universalworks.co.in</p>
-                    <a href="brochure.pdf" class="brochure-btn" download>
-                        <!-- <img src="images/pdf-icon.png" alt="PDF"> Download Brochure -->
-                    </a>
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-water"></i> Terrace Waterproofing</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Basement Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-wrench"></i> Crack Sealing</a></li>
+                        <li><a href="#"><i class="fas fa-vials"></i> Chemical Coating</a></li>
+                        <li><a href="#"><i class="fas fa-swimming-pool"></i> Pool Sealing</a></li>
+                    </ul>
                 </div>
 
-                <!-- Column 4: Address -->
-                <div class="footer-address">
-                    <h4>Get an Estimate & Inspection Today:</h4>
-                    <p><strong>Borivali:</strong> 402, Ramtirth CHSL., Ram Mandir Road, Babhai Naka, Near Bhargav
-                        Hospital, Borivali (W), Mumbai - 400092.</p>
-                    <p><strong>Virar:</strong> 101/102, G Wing, Royal Garden, Bldg No. 2, Sector 3, Chikhal Dongre, HDIL
-                        Layout, Virar (W) - 401303.</p>
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Waterproof Street, Ahmedabad, Gujarat</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@chandanenterprise.com</p>
                 </div>
             </div>
-        </footer>
 
+            <div class="footer-bottom">
+                <p>&copy; 2025 <strong>Chandan Enterprise</strong>. All Rights Reserved.</p>
+            </div>
+        </footer>
 
 
 

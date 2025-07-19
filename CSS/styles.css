@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 #wrapper {
   width: 100vw;
@@ -187,10 +187,10 @@ body{
 }
 
 /* ========= Tag Line CSS ============  */
-.tagline-section{
-    background-color: #1b82a4;
-    font-size: 1rem;
-    color: #fff;
+.tagline-section {
+  background-color: #1b82a4;
+  font-size: 1rem;
+  color: #fff;
 }
 .tagline {
   display: flex;
@@ -220,13 +220,12 @@ body{
   font-weight: 500;
   color: #fff;
 }
-.column3 i{
-    margin-right: 10px;
+.column3 i {
+  margin-right: 10px;
 }
 .clear {
   display: none; /* not needed anymore with flexbox */
 }
-
 
 /* ========= Content Sections ========== */
 
@@ -257,6 +256,7 @@ body{
   margin-bottom: 10px;
   font-size: 16px;
   color: #333;
+  text-align: start;
 }
 
 /* Columns Row */
@@ -286,11 +286,14 @@ body{
   margin-bottom: 10px;
   font-size: 16px;
   color: #333;
+  text-align: start;
 }
+
 
 /* Motto Section */
 .motto {
   margin-top: 20px;
+  text-align: start;
 }
 
 .motto h3 {
@@ -321,11 +324,9 @@ body{
   }
 }
 
-
-
 /* ========= Footer Section =========  */
 
-.footer-section {
+/* .footer-section {
   background-color: #f9f9f9;
   padding: 30px 20px;
   font-family: Arial, sans-serif;
@@ -377,7 +378,7 @@ body{
   line-height: 1.4;
 }
 .footer-address {
-    width: 25%;
+  width: 25%;
 }
 .brochure-btn {
   display: inline-flex;
@@ -412,73 +413,243 @@ body{
   .footer-address {
     text-align: center;
   }
+} */
+
+.footer-attractive {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* New darker contrast */
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+.footer-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.2));
+}
+
+.footer-col h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  position: relative;
+  text-align: center; /* or default */
+}
+
+.footer-col h4::after {
+   content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #4fc3f7; /* or your brand color */
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cfd8dc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #e0f7fa;
+  line-height: 1.5;
+}
+
+.footer-col p i {
+  margin-right: 10px;
+  color: #fff176;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #e1f5fe;
+}
 
 /* ============== About Page CSS ==================  */
 
 /* --------- Hero Section -----------  */
 
-/* Basic Reset */
+/* Container */
+.hero-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
 /* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* Layout */
 .hero-container {
   display: flex;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  animation: fadeSlideIn 1s ease forwards;
 }
 
-/* Left Image */
+/* Image Section */
 .hero-image {
   flex: 1;
   text-align: center;
+  animation: fadeInImage 1.2s ease forwards;
 }
 
 .hero-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
 }
 
-/* Right Content */
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Content Section */
 .hero-content {
   flex: 1;
+  animation: slideInRight 1s ease forwards;
 }
 
+/* Heading with Transition */
 .hero-content h1 {
-  font-size: 2.8rem;
-  color: #0d47a1;
-  margin-bottom: 20px;
+  text-align: start;
+  font-size: 3rem;
+  color: #006064;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
 }
 
+.hero-content h1:hover {
+  color: #1565c0;
+  letter-spacing: 1.5px;
+  transform: scale(1.02);
+}
+
+/* Subheading */
+.hero-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
 .hero-content p {
   font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #555;
   margin-bottom: 25px;
 }
 
+/* Button Style with Hover */
 .hero-btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 14px 28px;
+  background-color: #039be5;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
   text-decoration: none;
   font-size: 1rem;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hero-btn:hover {
   background-color: #0056b3;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
+
+  .hero-content h3 {
+    font-size: 1.3rem;
+  }
+
   .hero-content p {
     font-size: 1rem;
   }
@@ -494,18 +665,22 @@ body{
     font-size: 2rem;
   }
 
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+
   .hero-btn {
     display: inline-block;
     margin-top: 10px;
   }
 }
 
-
 /* ------------- Page Banner -------------  */
 
 .page-banner {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1591645321243-3adc1e75cfdc?q=80&w=1203&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  background: url("https://images.unsplash.com/photo-1591645321243-3adc1e75cfdc?q=80&w=1203&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ")
+    no-repeat center center/cover;
   height: 300px;
   display: flex;
   align-items: center;
@@ -541,14 +716,14 @@ body{
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
 .banner-content p {
   font-size: 1rem;
   color: #f1f1f1;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content a {
@@ -581,4 +756,875 @@ body{
     font-size: 0.95rem;
   }
 }
-/* ======== Slider Section Start  */
+
+/* ------------ Company section -------------  */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f8fb;
+}
+
+/* Section Container */
+.company-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.company-section {
+  background: linear-gradient(to right, #ffffff, #e1f5fe);
+  padding: 80px 0;
+}
+
+/* Header */
+.company-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.company-header h2 {
+  font-size: 2.8rem;
+  color: #01579b;
+  position: relative;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #039be5;
+  margin: 12px auto;
+  border-radius: 2px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+.company-header p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  animation: fadeSlideUp 1.2s ease;
+}
+
+/* Image Card */
+.company-image-box {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.company-image-box img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.company-image-box:hover img {
+  transform: scale(1.05);
+}
+
+/* Service Cards */
+.company-info-box .info-item {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-left: 6px solid #0288d1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(2, 136, 209, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.company-info-box .info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(2, 136, 209, 0.2);
+}
+
+.company-info-box h3 {
+  font-size: 1.25rem;
+  color: #0277bd;
+  margin-bottom: 10px;
+}
+
+.company-info-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ------------ Why Chooese US --------------  */
+
+.why-choose-us-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Section Styling */
+.why-choose-us-section {
+  background: url("https://www.transparenttextures.com/patterns/natural-paper.png"),
+    linear-gradient(to right, #e0f7fa, #ffffff);
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/* Header */
+.why-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.why-header h2 {
+  font-size: 2.6rem;
+  color: #01579b;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.why-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Cards Layout */
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  animation: fadeSlideUp 1.2s ease;
+}
+
+.why-card {
+  flex: 1 1 calc(50% - 30px);
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.why-card .icon {
+  font-size: 36px;
+  color: #0288d1;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.why-card:hover .icon {
+  transform: scale(1.3);
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .why-card {
+    flex: 1 1 100%;
+  }
+
+  .why-header h2 {
+    font-size: 2rem;
+  }
+
+  .why-card .icon {
+    font-size: 32px;
+  }
+}
+
+/* --------------- Cta Section -------------  */
+
+.cta-section {
+  background: linear-gradient(to right, #0288d1, #26c6da);
+  padding: 20px 20px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #e0f7fa;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #0288d1;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  animation: bounceIn 1.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: #01579b;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+
+/* =========================== Services Page CSS =============================  */
+
+/* -------------------- Company Service Section --------------  */
+
+.waterproof-services {
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #01579b;
+  margin-bottom: 10px;
+  text-align: center;
+  animation: fadeInDown 0.7s ease;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #455a64;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Each Service Box */
+.service-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.service-box i {
+  font-size: 40px;
+  color: #0288d1;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  color: #0277bd;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #546e7a;
+}
+
+/* Hover Effects */
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: #01579b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-box {
+    padding: 20px 15px;
+  }
+}
+
+
+/* ------------- Why Choose Us -----------------  */
+
+.why-us-timeline {
+  background: #f1f8ff;
+  padding: 80px 20px;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+.timeline-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #455a64;
+  margin-bottom: 50px;
+}
+
+.timeline-list {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-item {
+  background: #ffffff;
+  display: flex;
+  gap: 20px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-left: 4px solid #0288d1;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideInFade 0.6s ease forwards;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  font-size: 35px;
+  color: #0288d1;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  color: #01579b;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 0.96rem;
+  color: #607d8b;
+}
+
+/* Hover Effect */
+.timeline-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    border-left: none;
+    border-top: 4px solid #0288d1;
+    text-align: center;
+  }
+
+  .timeline-icon {
+    margin: 0 auto 10px;
+  }
+}
+
+/* Animation */
+@keyframes slideInFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- Process Section --------------  */
+
+.choose-modern {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.choose-modern-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.choose-modern-left {
+  flex: 1 1 500px;
+  animation: slideLeft 1s ease forwards;
+}
+
+.choose-modern-left h2 {
+  font-size: 2.7rem;
+  color: #01579b;
+  margin-bottom: 20px;
+}
+
+.choose-modern-left p {
+  font-size: 1.1rem;
+  color: #455a64;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.choose-btn {
+  display: inline-block;
+  background: #0288d1;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.choose-btn:hover {
+  background: #01579b;
+  transform: scale(1.05);
+}
+
+/* Right Cards */
+.choose-modern-right {
+  flex: 1 1 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  animation: slideRight 1s ease forwards;
+}
+
+.choose-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.choose-card i {
+  font-size: 40px;
+  color: #0288d1;
+  margin-bottom: 15px;
+}
+
+.choose-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0277bd;
+}
+
+.choose-card p {
+  color: #607d8b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.choose-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes slideLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .choose-modern-container {
+    flex-direction: column;
+  }
+
+  .choose-modern-left h2 {
+    font-size: 2rem;
+  }
+
+  .choose-modern-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============ Client Page =============  */
+
+.client-projects-icons {
+  padding: 80px 20px;
+  background: #f0f8ff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #546e7a;
+  margin-bottom: 50px;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.icon-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icon-card .icon {
+  font-size: 40px;
+  color: #0288d1;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-card:hover .icon {
+  color: #01579b;
+  transform: scale(1.1);
+}
+
+.icon-card h4 {
+  font-size: 1.3rem;
+  color: #0288d1;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  color: #455a64;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+/* --------- Client Test ---------  */
+
+.client-section-modern {
+  padding: 80px 20px;
+  background: #f7fbfd;
+  text-align: center;
+}
+
+.client-section-modern .container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+.section-subheading {
+  color: #607d8b;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.client-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-block {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid #0288d1;
+}
+
+.project-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-icon {
+  width: 60px;
+  height: 60px;
+  background: #e1f5fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: #0288d1;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-block:hover .project-icon {
+  background: #0288d1;
+  color: #fff;
+}
+
+.project-block h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0277bd;
+}
+
+.project-block p {
+  color: #455a64;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
