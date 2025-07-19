@@ -1628,3 +1628,92 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+
+/* ============== Testomonial Pages =================  */
+
+.testimonial-section {
+  background: linear-gradient(to right, #e3f2fd, #f1f8ff);
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.testimonial-container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.testimonial-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonial-heading h2 {
+  font-size: 2.2rem;
+  color: #004d7a;
+  position: relative;
+}
+
+.testimonial-heading p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-box {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 77, 122, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 77, 122, 0.2);
+}
+
+.testimonial-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial-client {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.testimonial-client img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00acc1;
+}
+
+.testimonial-client h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #004d7a;
+}
+
+.testimonial-client span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.stars {
+  margin-left: auto;
+  font-size: 1rem;
+  color: #ffc107;
+}
