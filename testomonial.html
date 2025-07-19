@@ -13,29 +13,35 @@
 
 <body>
     <div id="wrapper">
-        <div class="container">
-            <header class="main-header">
-                <nav class="nav-bar">
-                    <div class="nav-logo">
-                        <img src="Images/chandan-logo.png" alt="chandan_enterprise-logo">
-                    </div>
+              <header class="light-header">
+            <div class="container nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="/"><img src="Images/chandan-logo.png" alt="Chandan Enterprise Logo"  /></a>
+                </div>
 
-                    <div class="nav-menu" id="navMenu">
-                        <ul class="nav-link">
+                <!-- Hamburger Icon -->
+                <button class="hamburger" id="hamburger">&#9776;</button>
+
+                <!-- Navigation + CTA grouped -->
+                <div class="nav-wrapper" id="navMenu">
+                    <nav class="nav-links">
+                        <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li><a href="services.html">Services</a></li>
-                            <li><a href="client.html">Client List</a></li>
+                            <li><a href="client.html">Clients</a></li>
                             <li><a href="testomonial.html">Testimonials</a></li>
-                            <li><a href="formEnquiry.html">Enquiry Form</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="formEnquiry.html">Enquiry</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
-                    </div>
+                    </nav>
 
-                    <button class="hamburger" id="hamburger">&#9776;</button>
-                </nav>
-            </header>
-        </div>
+                    <!-- Call to Action Button (always visible) -->
+                    <a href="formEnquiry.html" class="nav-btn">Get Quote</a>
+                </div>
+            </div>
+        </header>
 
         <section class="page-banner">
             <div class="overlay"></div>
