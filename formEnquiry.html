@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Enquiry | Chandan Enterpries</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="Js/main.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+   
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <header class="main-header">
+                <nav class="nav-bar">
+                    <div class="nav-logo">
+                        <img src="./Images/chandan-logo.png" alt="chandan_enterprise-logo">
+                    </div>
+
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-link">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="client.html">Client List</a></li>
+                            <li><a href="testomonial.html">Testimonials</a></li>
+                            <li><a href="formEnquiry.html">Enquiry Form</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <button class="hamburger" id="hamburger">&#9776;</button>
+                </nav>
+            </header>
+        </div>
+
+        <section class="page-banner">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Our Services</h1>
+                    <p><a href="/">Home</a> &raquo; Services</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="enquiry-slant">
+            <div class="enquiry-slant-bg"></div>
+            <div class="container enquiry-slant-wrapper">
+                <!-- Heading -->
+                <div class="enquiry-slant-heading">
+                    <h2>Need Waterproofing Help?</h2>
+                    <p>Our professionals are ready to assess and seal your property. Book a free inspection today!</p>
+                </div>
+
+                <!-- Enquiry Form Card -->
+                <div class="enquiry-slant-card">
+                    <form action="https://formsubmit.co/chiragparihar118@gmail.com" method="POST" class="enquiry-form">
+                        <!-- Your Inputs -->
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <textarea name="message" placeholder="Your message..." required></textarea>
+
+                        <!-- Hidden Inputs -->
+                        <input type="hidden" name="_subject" value="New Enquiry from Website!">
+                        <input type="hidden" name="_autoresponse"
+                            value="Thank you for contacting Chandan Enterprise. Our team will get in touch with you shortly.">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <button type="submit">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <footer class="footer-attractive">
+            <div class="container footer-flex">
+
+                <!-- Logo & Company -->
+                <div class="footer-col footer-logo-col">
+                    <img src="Images/chandan-logo.png" alt="Chandan Enterprise Logo" class="footer-logo" />
+                    <p>
+                        Providing industry-leading waterproofing solutions for homes, businesses, and industries.
+                        Trusted by 1000+ clients.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
+                        <li><a href="client.html"><i class="fas fa-angle-right"></i> Clients</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-water"></i> Terrace Waterproofing</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Basement Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-wrench"></i> Crack Sealing</a></li>
+                        <li><a href="#"><i class="fas fa-vials"></i> Chemical Coating</a></li>
+                        <li><a href="#"><i class="fas fa-swimming-pool"></i> Pool Sealing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Waterproof Street, Ahmedabad, Gujarat</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@chandanenterprise.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 <strong>Chandan Enterprise</strong>. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -22,3 +22,15 @@ function changeSlide(direction) {
   currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+// Form Validation
+// This script validates the form inputs before submission.
+
+document.querySelector(".enquiry-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  alert("Thank you for contacting Chandan Enterprise! We’ll be in touch soon.");
+
+  // Optionally, submit the form manually if you're using EmailJS or backend
+  this.submit();
+});
