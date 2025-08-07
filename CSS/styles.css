@@ -2835,3 +2835,230 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ------------ Serivces pages image  CSS----------------  */
+
+.srv-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.srv-left-panel {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.srv-category-toggle {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #1e293b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.srv-category-toggle:hover {
+  background-color: #0f172a;
+}
+
+.srv-category-toggle i {
+  margin-right: 8px;
+}
+
+.srv-arrow i {
+  transition: transform 0.3s;
+}
+
+.srv-category-toggle.active .srv-arrow i {
+  transform: rotate(180deg);
+}
+
+.srv-services {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+  flex-direction: column;
+}
+
+.srv-services a {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  background-color: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1e293b;
+  transition: background 0.3s;
+}
+
+.srv-services a:hover {
+  background-color: #cbd5e1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.srv-right-panel {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.srv-main-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.srv-thumbnail-list {
+  display: flex;
+  gap: 10px;
+}
+
+.srv-thumbnail-list img {
+  width: 90px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.srv-thumbnail-list img:hover,
+.srv-thumbnail-list img.active {
+  border-color: #007bff;
+}
+.srv-description {
+  margin-top: 30px;
+}
+
+.srv-description h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.srv-description p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.srv-description ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #444;
+}
+
+.srv-description ul li {
+  margin-bottom: 6px;
+}
+@media (max-width: 1024px) {
+  .srv-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .srv-left-panel {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .srv-category {
+    flex: 1 1 100%;
+  }
+
+  .srv-category-toggle {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .srv-services a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .srv-right-panel {
+    padding: 20px 0 0 0;
+  }
+
+  .srv-main-img {
+    height: 280px;
+  }
+
+  .srv-thumbnail-list {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .srv-thumbnail-list img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .srv-description h2 {
+    font-size: 18px;
+  }
+
+  .srv-description p,
+  .srv-description ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .srv-left-panel {
+    flex-direction: column;
+  }
+
+  .srv-main-img {
+    height: 220px;
+  }
+
+  .srv-thumbnail-list img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .srv-description {
+    margin-top: 20px;
+  }
+
+  .srv-description h2 {
+    font-size: 16px;
+  }
+
+  .srv-description p,
+  .srv-description ul li {
+    font-size: 13px;
+  }
+}
