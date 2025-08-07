@@ -17,6 +17,8 @@ body {
   margin: 0 auto;
 }
 
+/*--------------------- Header section ----------------- */
+
 .light-header {
   background: #ffffff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -155,4 +157,101 @@ body {
 
 .mav-btn:hover::before {
   left: 100%;
+}
+
+
+
+/* ------------- Footer Secton ----------  */
+
+.footer-attractive {
+  background: linear-gradient(
+    to right,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* New darker contrast */
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+}
+
+.footer-col h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  position: relative;
+  text-align: center; /* or default */
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #4fc3f7; /* or your brand color */
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cfd8dc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #e0f7fa;
+  line-height: 1.5;
+}
+
+.footer-col p i {
+  margin-right: 10px;
+  color: #fff176;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #e1f5fe;
 }
