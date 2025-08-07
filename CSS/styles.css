@@ -560,7 +560,7 @@ body {
     #2c5364
   ); /* New darker contrast */
   color: #fff;
-  padding: 60px 20px 30px;
+  padding: 40px 20px 30px;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -653,13 +653,12 @@ body {
 .hero-section .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 /* Hero Section */
 .hero-section {
   background: linear-gradient(to right, #e3f2fd, #ffffff);
-  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -909,12 +908,11 @@ body {
 .company-section .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 35px 20px;
 }
 
 .company-section {
   background: linear-gradient(to right, #ffffff, #e1f5fe);
-  padding: 80px 0;
 }
 
 /* Header */
@@ -1047,7 +1045,7 @@ body {
 .why-choose-us-section .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 35px 20px;
 }
 
 /* Section Styling */
@@ -1272,7 +1270,7 @@ body {
 
 .waterproof-services {
   background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
-  padding: 80px 20px;
+  padding: 35px 20px;
   text-align: center;
 }
 
@@ -1337,6 +1335,24 @@ body {
   color: #01579b;
 }
 
+.all-services-section .service-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0077cc; /* or use #000 for black text */
+  background-color: transparent;
+  border: 2px solid #0077cc;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.all-services-section .service-btn:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
 /* Animations */
 @keyframes fadeInDown {
   from {
@@ -1375,7 +1391,7 @@ body {
 
 .why-us-timeline {
   background: #f1f8ff;
-  padding: 80px 20px;
+  padding: 35px 20px;
 }
 
 .timeline-title {
@@ -1445,6 +1461,9 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .timeline-title {
+    font-size: 2rem;
+  }
   .timeline-item {
     flex-direction: column;
     border-left: none;
@@ -1473,7 +1492,7 @@ body {
 
 .choose-modern {
   background: linear-gradient(to right, #e0f7fa, #ffffff);
-  padding: 80px 20px;
+  padding: 35px 20px;
   overflow: hidden;
 }
 
@@ -1615,7 +1634,7 @@ body {
 /* ============ Client Page =============  */
 
 .client-projects-icons {
-  padding: 80px 20px;
+  padding: 35px 20px;
   background: #f0f8ff;
 }
 
@@ -1696,7 +1715,7 @@ body {
 /* --------- Client Test ---------  */
 
 .client-section-modern {
-  padding: 80px 20px;
+  padding: 35px 20px;
   background: #f7fbfd;
   text-align: center;
 }
@@ -1768,12 +1787,19 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  .client-section-modern .section-heading {
+    font-size: 2rem;
+    color: #01579b;
+    margin-bottom: 10px;
+  }
+}
 
 /* ============== Testomonial Pages =================  */
 
 .testimonial-section {
   background: linear-gradient(to right, #e3f2fd, #f1f8ff);
-  padding: 80px 20px;
+  padding: 35px 20px;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -1856,19 +1882,27 @@ body {
   font-size: 1rem;
   color: #ffc107;
 }
-
+@media (max-width: 768px) {
+  .testimonial-heading h2 {
+    font-size: 2rem;
+    color: #004d7a;
+    position: relative;
+  }
+}
 /* -------------- Google Review Section -----------  */
 
 .testimonial-timeline {
   background: #e3f2fd;
-  padding: 80px 20px;
+  padding: 35px 20px;
   font-family: "Segoe UI", sans-serif;
   position: relative;
+  overflow: hidden;
 }
 
 .container {
   max-width: 1280px;
   margin: auto;
+  padding: 0 15px;
 }
 
 .timeline-heading {
@@ -1898,21 +1932,23 @@ body {
   width: 4px;
   background: #90caf9;
   transform: translateX(-50%);
+  z-index: 0;
 }
 
 .timeline-block {
-  width: 50%;
+  width: 100%;
+  max-width: 48%;
   padding: 20px;
   position: relative;
 }
 
 .timeline-block.left {
-  left: 0;
+  margin-right: auto;
   text-align: right;
 }
 
 .timeline-block.right {
-  left: 50%;
+  margin-left: auto;
   text-align: left;
 }
 
@@ -1923,6 +1959,7 @@ body {
   position: relative;
   box-shadow: 0 6px 15px rgba(0, 77, 122, 0.15);
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .timeline-content:hover {
@@ -1937,7 +1974,7 @@ body {
   height: 20px;
   background: #1976d2;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .timeline-block.left::before {
@@ -1966,23 +2003,31 @@ body {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+/* ✅ Responsive for mobile and tablets */
+@media (max-width: 992px) {
   .timeline-wrapper::before {
-    left: 8px;
+    display: none;
   }
 
-  .timeline-block,
+  .timeline-block {
+    max-width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .timeline-block.left,
   .timeline-block.right {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 0;
-    text-align: left;
+    margin: 0 auto;
   }
 
   .timeline-block::before {
-    left: 0;
-    right: auto;
+    left: 10px;
+    top: 20px;
+  }
+
+  .timeline-content {
+    margin-left: 30px;
   }
 }
 
@@ -1992,7 +2037,7 @@ body {
 .enquiry-slant {
   position: relative;
   background: #f2f9ff;
-  padding: 120px 20px 80px;
+  padding: 50px 20px 80px;
   overflow: hidden;
 }
 
@@ -2130,7 +2175,7 @@ body {
 
 .contact-info-modern {
   background: linear-gradient(135deg, #e0f7ff, #f5fcff);
-  padding: 80px 20px;
+  padding: 35px 20px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -2227,7 +2272,7 @@ body {
 .enquiry-center-slant {
   position: relative;
   background: #f0f8ff;
-  padding: 80px 20px;
+  padding: 35px 20px;
   overflow: hidden;
 }
 
@@ -2343,7 +2388,7 @@ body {
 
 .map-section {
   background: #f0f8ff;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
 .map-wrapper {
@@ -2443,7 +2488,7 @@ body {
 .connect-section {
   background: linear-gradient(to right, #004aad, #00c6ff);
   color: #fff;
-  padding: 80px 20px;
+  padding: 35px 20px;
   text-align: center;
 }
 
@@ -3022,6 +3067,10 @@ body {
 }
 
 /* -------------- Home serivces Section  */
+.all-services-section {
+  padding: 20px 20px;
+}
+
 .home-services {
   padding: 20px 20px;
   background-color: #f8fafc;
@@ -3093,6 +3142,7 @@ body {
 .service-btn:hover {
   background-color: #0284c7;
 }
+
 
 /*  ------------ Client Logo Section -------- */
 
