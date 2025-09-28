@@ -1573,7 +1573,6 @@ body {
 
 .choose-modern-left {
   flex: 1 1 400px;
-  text-align: start;
   animation: slideLeft 1s ease forwards;
 }
 
@@ -2109,9 +2108,6 @@ body {
     top: 20px;
   }
 
-  .timeline-content {
-    margin-left: 30px;
-  }
 }
 
 /* =========== Enquiry Form ================  */
