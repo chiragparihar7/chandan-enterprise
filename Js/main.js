@@ -4,9 +4,8 @@ const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
 hamburger.addEventListener("click", () => {
-  console.log("Hamburger clicked");
+  hamburger.classList.toggle("active");
   navMenu.classList.toggle("open");
-  console.log("Nav menu toggled");
 });
 
 // Slider Functionality
