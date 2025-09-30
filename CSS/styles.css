@@ -205,7 +205,6 @@ body {
   border-radius: 2px;
   transition: 0.3s;
 }
-
 /* Responsive Styling */
 @media (max-width: 991px) {
   .hamburger {
@@ -226,6 +225,7 @@ body {
     padding: 0; /* no padding when closed */
   }
 
+ 
   .nav-wrapper.open {
     max-height: 500px; /* enough space for all items */
     padding: 20px 0; /* padding visible when open */
@@ -351,7 +351,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.service-column ul li a:hover{
+.service-column ul li a:hover {
   text-decoration: underline;
 }
 .warranty-text {
@@ -495,7 +495,7 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .content-section{
+  .content-section {
     padding: 50px 10px;
   }
   .row-columns {
@@ -630,15 +630,15 @@ body {
   position: relative;
   padding-bottom: 8px;
   position: relative;
-  text-align: center; /* or default */
+  text-align: start; /* or default */
 }
 
 .footer-col h4::after {
   content: "";
   position: absolute;
   bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  /* transform: translateX(-50%); */
   width: 50px;
   height: 3px;
   background-color: #4fc3f7; /* or your brand color */
@@ -646,6 +646,7 @@ body {
 }
 
 .footer-links {
+  text-align: start;
   list-style: none;
   padding: 0;
 }
@@ -675,11 +676,12 @@ body {
   margin-bottom: 12px;
   color: #e0f7fa;
   line-height: 1.5;
+  text-align: start;
 }
 
 .footer-col p i {
   margin-right: 10px;
-  color: #fff176;
+  color: #4fc3f7;
 }
 
 .footer-bottom {
@@ -831,7 +833,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 991px) {
-  .hero-section .container{
+  .hero-section .container {
     padding: 50px 10px;
   }
   .hero-content h1 {
@@ -1082,7 +1084,7 @@ body {
 
 /* Responsive */
 @media (max-width: 992px) {
-  .company-section .container{
+  .company-section .container {
     padding: 50px 10px;
   }
   .company-grid {
@@ -1203,7 +1205,7 @@ body {
 
 /* Responsive */
 @media (max-width: 992px) {
-  .why-choose-us-section .container{
+  .why-choose-us-section .container {
     padding: 50px 10px;
   }
   .why-card {
@@ -1307,8 +1309,8 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .cta-section{
-    padding: 50px 10px ;
+  .cta-section {
+    padding: 50px 10px;
   }
   .cta-content h2 {
     font-size: 2rem;
@@ -1525,7 +1527,7 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .why-us-timeline{
+  .why-us-timeline {
     padding: 50px 10px;
   }
   .timeline-title {
@@ -1697,7 +1699,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .choose-modern{
+  .choose-modern {
     padding: 50px 10px;
   }
 }
@@ -1774,10 +1776,10 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
-  .client-projects-icons{
+  .client-projects-icons {
     padding: 50px 10px;
   }
-  .client-section-modern{
+  .client-section-modern {
     padding: 50px 10px;
   }
   .section-title {
@@ -1960,10 +1962,10 @@ body {
   color: #ffc107;
 }
 @media (max-width: 991px) {
-  .testimonial-timeline{
+  .testimonial-timeline {
     padding: 50px 10px;
   }
-  .testimonial-section{
+  .testimonial-section {
     padding: 50px 10px;
   }
   .testimonial-heading h2 {
@@ -2108,7 +2110,6 @@ body {
     left: 10px;
     top: 20px;
   }
-
 }
 
 /* =========== Enquiry Form ================  */
@@ -2336,7 +2337,7 @@ body {
 
 /* Responsive tweaks */
 @media (max-width: 991px) {
-  .contact-info-modern{
+  .contact-info-modern {
     padding: 50px 10px;
   }
   .contact-info-card {
@@ -2550,9 +2551,9 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
- .map-section{
-  padding: 50px 10px;
- }
+  .map-section {
+    padding: 50px 10px;
+  }
   .map-wrapper {
     flex-direction: column;
   }
@@ -2655,7 +2656,7 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .connect-section{
+  .connect-section {
     padding: 50px 10px;
   }
   .connect-heading {
@@ -2796,7 +2797,7 @@ body {
 
 /* Image Styling */
 .home-about-image {
-  flex: 1 1 480px;  
+  flex: 1 1 480px;
   border-radius: 16px;
   text-align: center;
   overflow: hidden;
@@ -3238,8 +3239,8 @@ body {
   color: #0284c7;
 }
 @media (max-width: 991px) {
-  .all-services-section{
-    padding: 50px 10px ;
+  .all-services-section {
+    padding: 50px 10px;
   }
   .home-services {
     padding: 50px 10px;
